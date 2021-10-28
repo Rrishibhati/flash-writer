@@ -1,0 +1,16 @@
+.landing-container{
+    display: flex;
+    justify-content: space-between;
+    background: #474646;
+    align-items: center;
+}
+
+.typewriter-text h1 {
+    color: white;
+    font-size: 40px;
+    display: flex;
+    font-family: 'Irish Grover', cursive;
+    margin-top: -300px;
+    margin-left: 110px;
+    font-weight: 100;
+}
