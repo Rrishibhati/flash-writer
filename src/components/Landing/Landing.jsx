@@ -7,9 +7,9 @@ const Landing = () => {
 
     return(
         <div className="landing-container">
-            <div className="typewriter-text">
-                <h1>Are You&nbsp;
-                <Typewriter
+            <div className="typewriter-text" data-aos="fade-right">
+                <h1>Can You Type... </h1>
+                <h1 className="typewriter"> <Typewriter
                     options={{
                         strings: ['Fast!', 'Correct!', 'Accurate!'],
                         autoStart: true,
@@ -18,7 +18,7 @@ const Landing = () => {
                 />
                 </h1>
             </div>
-            <div className="landing-image">
+            <div className="landing-image" data-aos="fade-left">
                 <img alt="landing-image" rel="noreferrer" src={langingimage} />
             </div>
         </div>

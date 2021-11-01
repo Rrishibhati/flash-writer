@@ -10,7 +10,22 @@
     font-size: 40px;
     display: flex;
     font-family: 'Irish Grover', cursive;
-    margin-top: -300px;
+    margin-top: -200px;
     margin-left: 110px;
     font-weight: 100;
+}
+
+.typewriter-text h1.typewriter {
+    color: white;
+    font-size: 40px;
+    display: flex;
+    font-family: 'Irish Grover', cursive;
+    margin-left: 110px;
+    font-weight: 100;
+    margin-top: 0px;
+    line-height: 1px;
+}
+
+.landing-image img{
+    height: 650px;
 }
