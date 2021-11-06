@@ -1,0 +1,40 @@
+.challenge-nav-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px 0px 10px;
+    flex-grow: 1;
+    box-shadow: 0px 0px 2px #958c8c;
+    transition: box-shadow 0.3s;
+}
+
+.challenge-nav-container:hover{
+    box-shadow: 0px 4px 10px dodgerblue;
+}
+
+.nav-title{
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+}
+
+.nav-value{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.timer{
+    display: flex;
+    font-size: 32px;
+    padding: 30px 0px 0px;
+    margin: 0;
+}
+
+.timer-title{
+    margin: 0;
+    padding: 10px 0px 50px;
+    color: orange;
+    font-size: 18px;
+}

@@ -1,21 +1,21 @@
 import React from "react";
 import "./ResultSection.css";
 
-const ResultSection = () => {
+const ResultSection = ({ words , characters, speed}) => {
 
     return(
         <div className="result-section-container">
             <div className="result-summary">
                 <p>
-                    <b>Alphabets : </b> 56
+                    <b>Characters : </b> {characters}
                 </p>
 
                 <p>
-                    <b>Words : </b> 23
+                    <b>Words : </b> {words}
                 </p>
 
                 <p>
-                    <b>Speed : </b> 12 wpm
+                    <b>Speed : </b> {speed} wpm
                 </p>
             </div>
 

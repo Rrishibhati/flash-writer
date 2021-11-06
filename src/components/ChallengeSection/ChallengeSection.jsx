@@ -1,26 +1,41 @@
 import React  from "react";
 import "./ChallengeSection.css";
-import ResultSection from "../ResultSection/ResultSection";
-import Typewriter from 'typewriter-effect';
+import TestContainer from "../TestConatainer/TestContainer";
+import ResultSection from "./../ResultSection/ResultSection";
 
 
-const ChallengeSection = () => {
+const ChallengeSection = ({ 
+        words,
+        characters,
+        speed,
+        isTestStarted,
+        timer,
+        paragraph,
+        challengeStatus
+    }) => {
+    
+    let component_shown = challengeStatus ? <TestContainer  
+                                                    words={words}
+                                                    characters={characters} 
+                                                    speed={speed}
+                                                    isTestStarted={isTestStarted}
+                                                    timer={timer}
+                                                    paragraph={paragraph}
+                                                /> : 
+                                                <ResultSection 
+                                                    words={words} 
+                                                    characters={characters} 
+                                                    speed={speed}
+                                                />;
 
     return(
         <div className="challenge-section-container">
             <div className="challenge-section-header-conatainer">
                 <h1 className="challenge-section-header">
-                    <Typewriter
-                        options={{
-                            strings: ['Are you ready for flash test ?'],
-                            autoStart: true,
-                            loop: true,
-                        }}
-                    />
-                    
+                    Speed Test Result
                 </h1>
 
-                <ResultSection />
+                {component_shown}
             </div>
         </div>
     )

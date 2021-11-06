@@ -1,0 +1,38 @@
+.challenge-container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.challenge-container-top{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.challenge-container-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.textarea-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.challenge-paragraph{
+    width: 380px;
+    border: 1px solid gray;
+    padding: 5px 10px;
+    height: 91%;
+}
+
+.textarea-right textarea{
+    font-size: 20px;
+    padding: 5px 10px;
+}
