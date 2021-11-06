@@ -10,8 +10,10 @@ const ChallengeSection = ({
         speed,
         isTestStarted,
         timer,
-        paragraph,
-        challengeStatus
+        challengeStatus,
+        inputChange,
+        paragraph_array,
+        tryAgainHandler,
     }) => {
     
     let component_shown = challengeStatus ? <TestContainer  
@@ -20,19 +22,21 @@ const ChallengeSection = ({
                                                     speed={speed}
                                                     isTestStarted={isTestStarted}
                                                     timer={timer}
-                                                    paragraph={paragraph}
+                                                    inputChange={inputChange}
+                                                    paragraph_array={paragraph_array}
                                                 /> : 
                                                 <ResultSection 
                                                     words={words} 
                                                     characters={characters} 
                                                     speed={speed}
+                                                    tryAgainHandler={tryAgainHandler}
                                                 />;
 
     return(
         <div className="challenge-section-container">
             <div className="challenge-section-header-conatainer">
                 <h1 className="challenge-section-header">
-                    Speed Test Result
+                    {`Flash Writer ${challengeStatus ? 'Challenge' : 'Result' }`}
                 </h1>
 
                 {component_shown}

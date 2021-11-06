@@ -8,7 +8,8 @@ const TestContainer = ({
         speed,
         isTestStarted,
         timer,
-        paragraph,
+        inputChange,
+        paragraph_array,
     }) => {
     
     return(
@@ -20,7 +21,8 @@ const TestContainer = ({
                 speed={speed}
                 isTestStarted={isTestStarted}
                 timer={timer}
-                paragraph={paragraph}
+                inputChange={inputChange}
+                paragraph_array={paragraph_array}
             />
         </div>
     )

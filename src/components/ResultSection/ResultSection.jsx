@@ -1,7 +1,7 @@
 import React from "react";
 import "./ResultSection.css";
 
-const ResultSection = ({ words , characters, speed}) => {
+const ResultSection = ({ words , characters, speed, tryAgainHandler}) => {
 
     return(
         <div className="result-section-container">
@@ -20,7 +20,7 @@ const ResultSection = ({ words , characters, speed}) => {
             </div>
 
             <div className="result-share-btns">
-                <a className="theme-btn try-again">Try Again</a>
+                <a className="theme-btn try-again" onClick={() => tryAgainHandler() }>Try Again</a>
                 <a className="theme-btn facebook">Facebook</a>
                 <a className="theme-btn twitter">Twitter</a>
             </div>

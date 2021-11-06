@@ -1,0 +1,11 @@
+.text-letter-not-attempted{
+    color:orange;
+}
+
+.text-letter-corrected{
+    color: green;
+}
+
+.text-letter-not-corrected{
+    color:red
+}
