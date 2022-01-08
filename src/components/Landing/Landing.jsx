@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import AOS from 'aos';
 import './Landing.css';
 import Typewriter from 'typewriter-effect';
 import langingimage from './../../assets/images/flash-pic-left.png';
 
 const Landing = () => {
+    
+    useEffect(() => {
+        AOS.init();
+    }, []);
 
     return(
         <div className="landing-container">
@@ -17,6 +23,7 @@ const Landing = () => {
                     }}
                 />
                 </h1>
+                <Link id="landing-start-button" className="btn btn-theme" to='/challenge-section'>Start Challenge</Link>
             </div>
             <div className="landing-image" data-aos="fade-left">
                 <img alt="landing-image" rel="noreferrer" src={langingimage} />

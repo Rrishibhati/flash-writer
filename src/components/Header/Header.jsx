@@ -10,7 +10,7 @@ const Header = () => {
             <div className="header-left">
                 <div className="header-logo">
                     <img src={logo} className="logo-image" alt="log-image" rel="noreferrer" />
-                    <span class="logo-text">Flash Writer</span>
+                    <span className="logo-text">Flash Writer</span>
                 </div>
             </div>
             <div className="header-right">

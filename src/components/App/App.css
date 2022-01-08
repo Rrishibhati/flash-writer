@@ -1,3 +1,20 @@
 #root{
     background: #474646;
 }
+
+.btn-theme {
+    color: #fff;
+    background-color: #2d2929;
+    border-color: #2d2929;
+    
+}
+
+.btn-theme:hover {
+    color : gold;
+}
+
+.dismiss, .dismiss:hover {
+    font-size:18px;
+    padding:5px 0px;
+    color:#fff;
+}

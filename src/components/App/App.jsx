@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import Header from "./../Header/Header";
 import Footer from "./../Footer/Footer";
@@ -13,7 +14,7 @@ const defaultStates = {
     characters : 0,
     speed : 0,
     isTestStarted : false,
-    timer : 60,
+    timer : 10,
     paragraph : [],
     paragraph_array : [],
     challengeStatus : true,
@@ -68,6 +69,7 @@ class App extends React.Component{
                 this.setState({
                     challengeStatus : false
                 });
+                //return <Navigate to="/result" />
             }
         
         }, 10e2);
@@ -146,21 +148,31 @@ class App extends React.Component{
     }
 
     render() {
+        
+        if(!this.state.challengeStatus) {
+            return <Navigate to='/challenge-section/result'/>;
+        }
+        
         return (
             <div className="app-container">
                 <Header />
-                <Landing />
-                <ChallengeSection 
-                    words={this.state.words}
-                    characters={this.state.characters} 
-                    speed={this.state.speed}
-                    isTestStarted={this.state.isTestStarted}
-                    timer={this.state.timer}
-                    challengeStatus={this.state.challengeStatus}
-                    paragraph_array={this.state.paragraph_array}
-                    inputChange={this.inputChangeHandler}
-                    tryAgainHandler={this.tryAgainHandler}
-                />
+                <Routes>
+                    <Route exact path= '/' element={<Landing />} ></Route>
+                    <Route exact path= '/challenge-section' element={
+                        <ChallengeSection 
+                            words={this.state.words}
+                            characters={this.state.characters} 
+                            speed={this.state.speed}
+                            isTestStarted={this.state.isTestStarted}
+                            timer={this.state.timer}
+                            challengeStatus={this.state.challengeStatus}
+                            paragraph_array={this.state.paragraph_array}
+                            inputChange={this.inputChangeHandler}
+                            tryAgainHandler={this.tryAgainHandler}
+                        />
+                    }>
+                    </Route>
+                </Routes>
                 <Footer />
             </div>
         )

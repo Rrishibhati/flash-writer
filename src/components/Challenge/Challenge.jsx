@@ -33,7 +33,7 @@ const Challenge = ({
                 </p>
 
                 <div className="textarea-container">
-                    <div class="textarea-left">
+                    <div className="textarea-left">
                         <div className="challenge-paragraph">
                             { paragraph_array.map((obj, index) => {
                                 return <TestLetters key={index} character={obj.character} status={obj.status} />
@@ -41,7 +41,7 @@ const Challenge = ({
                         </div>    
                     </div>
                     <div className="textarea-right">
-                        <textarea name="user-text" rows="22" cols="32" placeholder="start typing..."
+                        <textarea name="user-text" rows="17" cols="32" placeholder="start typing..."
                             onChange={(e) => inputChange(e.target.value)}
                         ></textarea>
                     </div>
